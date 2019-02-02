@@ -1,0 +1,35 @@
+Given the normalized data set of bank loan with 8 features and 1 target feature  both in separate csv files.
+
+Training Data File Format: 
+P4.csv file contains input attributes (x1, x2, … , x8) in 8 columns. 
+The P4y.csv file contains one column representing the Boolean class label (y).
+Each row is a training instance. 
+
+Input Sample:
+
+Read the csv file from this directory: "/data/training/P4.csv"
+P4.csv:
+[[ 0.516  0.921  2.33  ... -0.382  1.14  -0.87 ]
+ [ 0.516  0.921  0.342 ...  2.62  -0.88  -0.87 ]
+ [ 0.516 -0.959 -0.653 ... -0.382 -0.88   1.15 ]]
+
+
+Read the csv file from this directory: "/data/training/P4y.csv"
+P4y.csv:
+[1. 1. 0. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 0. 1. 1. 1. 1. 1.]
+
+
+Your job is to: 
+Split the data-set into train and test sets using sklearn with test_size=0.2 
+Find out the best value of K with maximum mean accuracy using iterations for K nearest neighbor 
+Save the  maximum accuracy along with best K value in a csv file
+
+Output Sample:
+
+Save the output file in following directory:   "/code/P4_eval.csv"
+
+ [ 0.867 5 ]
+
+Note: 
+The sample output may not be the real output.
+You can use numpy genfromtext to read csv file since it doesn't contain headers
